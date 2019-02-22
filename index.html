@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style/main.css">
+    <title>Gradient background</title>
+</head>
+<body id="gradient">
+    <h1>Background Generator</h1>
+    <div class="buttonsWrapper">
+        <input oninput="setGradient()" type="color" name="leftColor" id="leftColor" value="#00ff00">
+        <input onclick="randColor()" type="button" class="button" value="Feel Lucky?">
+        <input oninput="setGradient()" type="color" name="rightColor" id="rightColor" value="#ff0000">
+    </div>
+    
+    <h2>Current CSS Background</h2>
+
+    <div onclick="copyClipboard()" class="button" id="cssButton"></div>
+
+    <script type="text/javascript" src="./js/main.js"></script>
+</body>
+</html>
