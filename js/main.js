@@ -28,7 +28,7 @@ const randColor = () => {
 const generateRandColor = () => '#' + (Math.random().toString(16) + "000000").substring(2,8);
 
 
-const copyClipboard = () => {
+const copyToClipboard = () => {
     let temp = document.createElement('textarea');
     temp.value = gradient;
     body.appendChild(temp);
