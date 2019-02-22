@@ -1,12 +1,11 @@
-var css = document.getElementById("cssButton");
-var body = document.getElementById("gradient");
-var lColor = document.getElementById("leftColor");
-var rColor = document.getElementById("rightColor");
-var gradient;
+const css = document.getElementById("cssButton");
+const body = document.getElementById("gradient");
+const lColor = document.getElementById("leftColor");
+const rColor = document.getElementById("rightColor");
 
 
 
-function setGradient(lCol, rCol) {
+const setGradient = (lCol, rCol) => {
     body.style.background = "linear-gradient(to right, " 
     + lCol 
     + ", " 
@@ -15,25 +14,22 @@ function setGradient(lCol, rCol) {
 
     lColor.setAttribute("value", lCol);
     rColor.setAttribute("value", rCol);
-
-    gradient = body.style.background + ";"
-
-    css.textContent = gradient;
+    css.textContent = body.style.background + ";";
 }
 
-function randColor() {
-    var color1 = generateRandColor();
-    var color2 = generateRandColor();
+const randColor = () => {
+    let color1 = generateRandColor();
+    let color2 = generateRandColor();
 
     setGradient(color1, color2);
 }
 
-function generateRandColor() {
+const generateRandColor = () => {
     return '#' + (Math.random().toString(16) + "000000").substring(2,8)
 }
 
-function copyClipboard() {
-    var temp = document.createElement('textarea');
+const copyClipboard = () => {
+    let temp = document.createElement('textarea');
     temp.value = gradient;
     body.appendChild(temp);
     temp.select();
