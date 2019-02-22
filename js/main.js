@@ -2,7 +2,7 @@ const css = document.getElementById("cssButton");
 const body = document.getElementById("gradient");
 const lColor = document.getElementById("leftColor");
 const rColor = document.getElementById("rightColor");
-
+let gradient;
 
 
 const setGradient = (lCol, rCol) => {
@@ -14,7 +14,8 @@ const setGradient = (lCol, rCol) => {
 
     lColor.setAttribute("value", lCol);
     rColor.setAttribute("value", rCol);
-    css.textContent = body.style.background + ";";
+    gradient = body.style.background + ";";
+    css.textContent = gradient;
 }
 
 const randColor = () => {
@@ -24,9 +25,8 @@ const randColor = () => {
     setGradient(color1, color2);
 }
 
-const generateRandColor = () => {
-    return '#' + (Math.random().toString(16) + "000000").substring(2,8)
-}
+const generateRandColor = () => '#' + (Math.random().toString(16) + "000000").substring(2,8);
+
 
 const copyClipboard = () => {
     let temp = document.createElement('textarea');
