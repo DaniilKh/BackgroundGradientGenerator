@@ -10,9 +10,15 @@
 <body id="gradient">
     <h1>Background Generator</h1>
     <div class="buttonsWrapper">
-        <input type="color" name="leftColor" id="leftColor" value="#00ff00">
+        <label for="">
+                <div id="lColorDiv" class="colorInd"></div>
+                <input type="color" name="leftColor" id="leftColor" value="#00ff00">
+        </label>
         <input onclick="randColor()" type="button" class="button" value="Feel Lucky?">
-        <input type="color" name="rightColor" id="rightColor" value="#ff0000">
+        <label for="">
+                <input type="color" name="rightColor" id="rightColor" value="#ff0000">
+                <div id="rColorDiv" class="colorInd"></div>
+        </label>
     </div>
     
     <h2>Current CSS Background</h2>

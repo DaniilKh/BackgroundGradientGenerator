@@ -2,6 +2,8 @@ const css = document.getElementById("cssButton");
 const body = document.getElementById("gradient");
 const lColor = document.getElementById("leftColor");
 const rColor = document.getElementById("rightColor");
+const lColorDiv = document.getElementById("lColorDiv");
+const rColorDiv = document.getElementById("rColorDiv");
 
 let gradient;
 
@@ -13,7 +15,9 @@ const setGradient = (lCol, rCol) => {
         + rCol 
         + ")";
     lColor.setAttribute("value", lCol);
+    lColorDiv.style.backgroundColor = lCol;
     rColor.setAttribute("value", rCol);
+    rColorDiv.style.backgroundColor = rCol;
     gradient = body.style.background + ";";
     css.textContent = gradient;
 }
